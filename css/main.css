@@ -1,0 +1,216 @@
+﻿
+body{
+	background-image: url(../img/1282330.jpg);
+	color: darkblue;
+}
+
+#wrapper, header, footer, #content, #sidebar, #field, #game {
+		box-sizing: border-box;
+}
+
+#wrapper {
+     margin: 0px auto;
+	 background-color: rgb(230,230,250, 0.7);
+}
+
+#wrapper, header, #content, footer, #game, #sidebar, #sidebar ul li{
+	 outline: 1px solid darkblue;	
+}
+
+header, footer{
+	height: 120px;
+	padding: 20px;
+	text-align: center;
+}
+
+#content {
+	min-height: 400px;
+	display: flex;
+}
+
+#sidebar ul{
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+#sidebar ul li{
+		width: 100%;
+		padding: 15px 0px 15px 0px;
+		text-align: center;
+}
+
+#sidebar ul li a{
+	text-decoration: none;
+}
+
+#sidebar ul li.active{
+	color: darkblue;
+	background-color: 
+}
+#game{
+	margin: 15px;
+	padding: 15px;
+	background: white;
+    height: 95%;	
+	
+	opacity: 1;
+	background: rgb(240,248,255); /* у родителя(враппер) задан:  background-color: rgb(255,240,245, 0.7);  0.7 это опасити, а здесь опасити 1 и поле непрозрачное!*/
+}
+
+#game td{
+	width: 20px;
+	height: 20px;
+	border: 1px solid darkblue;
+}
+
+#game td.gamer1{
+	background: darkslateblue;
+
+}
+
+#game td.gamer2{
+	background: rgb(95,158,160, 0.8);
+}
+
+#game td.winner{
+	border: 1px solid red;
+	background: mediumvioletred;
+	transition: all 2s;
+}
+
+div.popup{
+	width: 250px;
+	height: 150px;
+	text-align: center;
+	padding-top: 40px;
+	font-size: 20px;
+	border: 2px solid darkblue;
+	background: rgb(176,196,222, 0.8);
+	
+	position: relative;
+	
+	position: absolute;
+	
+}
+
+div.popup button{
+	position: absolute;
+	top: 0;
+	right:0;
+	font-weight: bold;
+	color: darkblue;
+	background: rgb(119,136,153, 0.8);
+}
+
+@charset "UTF-8";
+@media screen and (min-width: 1600px){
+	#wrapper{
+			 width: 1200px;
+	}
+	
+	#sidebar{
+		width: 30%;
+	}
+
+	#field{
+		width: 70%;
+	}
+	#game{
+		min-height: 500px;
+	}
+	div.popup{
+		top: 30%;
+	    left: 50%;
+    }
+}
+
+@media screen and (max-width: 1599px) and (min-width: 1200px){
+	#wrapper{
+			 width: 900px;
+	}
+	#sidebar{
+		width: 25%;
+	}
+
+	#field{
+		width: 75%;
+	}
+	#game{
+		min-height: 500px;
+	}
+	div.popup{
+		top: 30%;
+	    left: 50%;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 800px){
+		#wrapper{
+			 width: 800px;
+	}
+	#content{
+			flex-direction: column;
+		}
+			#sidebar{
+		height: 25%;
+	}
+
+	#field{
+		height: 75%;
+	}
+	#game{
+		min-height: 500px;
+	}
+		div.popup {
+		top: 30%;
+	    left: 40%;
+    }
+}
+
+@media screen and (max-width: 799px) and (min-width: 480px){
+	#wrapper{
+			 width: 450px;
+	}
+	#content{
+			flex-direction: column;
+		}
+			#sidebar{
+		height: 25%;
+	}
+
+	#field{
+		height: 75%;
+	}
+	#game{
+		min-height: 400px;
+	}
+		div.popup {
+		top: 30%;
+	    left: 30%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+	#wrapper{
+			 width: 300px;
+	}
+	#content{
+			flex-direction: column;
+		}
+			#sidebar{
+		height: 25%;
+	}
+
+	#field{
+		height: 75%;
+	}
+	#game{
+		min-height: 300px;
+	}
+		div.popup {
+		top: 30%;
+	    left: 15%;
+    }
+}
