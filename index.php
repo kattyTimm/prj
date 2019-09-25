@@ -15,7 +15,7 @@
 		   <header>
 		     <h1>Игра "Пять точек"</h1>
 		   </header>
-		   
+		    branch
 		  <div id="content">  
 		   <div id="sidebar"> 
 		     <ul>
