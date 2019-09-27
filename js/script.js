@@ -1,5 +1,4 @@
-﻿   document.querySelector('#game').innerHTML ='';
-   
+﻿document.querySelector('#game').innerHTML = '';
 init(document.querySelector('#game'));
 
 function init(id){
@@ -258,6 +257,10 @@ class Field{
 		  for(let j = 0; j < colsNum; j++){
 			  let td = document.createElement('td');
 			  tr.appendChild(td);	
+			  
+			  let span = document.createElement('span');
+			  td.appendChild(span);
+			  span.classList.add('radius');
 		  }
 		     
 		  		  table.appendChild(tr);
